@@ -10,7 +10,8 @@ import { AppRoutesProps, routeConfig } from 'shared/config/routeConfig/routeConf
 export const AppRouter: React.FC = () => {
 	const renderWithWrapper = useCallback((route: AppRoutesProps) => {
 		const element = <Suspense fallback={<Loader />}>{route.element}</Suspense>;
-		return <Route key={route.path} path={route.path} element={element} />;
+		const index = !!route?.index;
+		return <Route key={route.path} path={route.path} element={element} index={index} />;
 	}, []);
 
 	return <Routes>{Object.values(routeConfig).map(renderWithWrapper)}</Routes>;

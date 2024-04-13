@@ -9,6 +9,7 @@ import { type RouteProps } from 'react-router-dom';
 
 export type AppRoutesProps = RouteProps & {
 	authOnly?: boolean;
+	index?: boolean;
 };
 
 export enum AppRoutes {
@@ -37,6 +38,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
 	[AppRoutes.MAIN]: {
 		path: RoutePath.main,
 		element: <MainPage />,
+		index: true,
 	},
 	[AppRoutes.ABOUT]: {
 		path: RoutePath.about,
