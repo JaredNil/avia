@@ -1,0 +1,14 @@
+.schedule {
+    width: 100%;
+
+    img {
+        width: 100%;
+        user-select: none;
+        pointer-events: none;
+    }
+}
+
+.schedule__title {
+    width: 100%;
+    padding-top: 60px;
+}

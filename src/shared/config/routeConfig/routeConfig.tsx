@@ -1,6 +1,10 @@
-import { AddPage } from 'pages/AddPage';
+import AboutPage from 'pages/AboutPage/ui/AboutPage';
+import { ContactPage } from 'pages/ContactPage';
 import { MainPage } from 'pages/MainPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
+import { PreepsPage } from 'pages/PreepsPage';
+import { SchedulePage } from 'pages/SchedulePage';
+import { SkillsPage } from 'pages/SkillsPage';
 import { type RouteProps } from 'react-router-dom';
 
 export type AppRoutesProps = RouteProps & {
@@ -11,6 +15,7 @@ export enum AppRoutes {
 	MAIN = 'main',
 	ABOUT = 'about',
 	SCHEDULE = 'schedule',
+	SKILLS = 'skills',
 	PREEPS = 'preeps',
 	CONTACT = 'contact',
 
@@ -21,6 +26,7 @@ export const RoutePath: Record<AppRoutes, string> = {
 	[AppRoutes.MAIN]: '/',
 	[AppRoutes.ABOUT]: '/about',
 	[AppRoutes.SCHEDULE]: '/schedule',
+	[AppRoutes.SKILLS]: '/skills',
 	[AppRoutes.PREEPS]: '/preeps',
 	[AppRoutes.CONTACT]: '/contact',
 
@@ -36,17 +42,21 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
 		path: RoutePath.about,
 		element: <AboutPage />,
 	},
-	[AppRoutes.ADD]: {
-		path: RoutePath.add,
-		element: <AddPage />,
+	[AppRoutes.SCHEDULE]: {
+		path: RoutePath.schedule,
+		element: <SchedulePage />,
 	},
-	[AppRoutes.ADD]: {
-		path: RoutePath.add,
-		element: <AddPage />,
+	[AppRoutes.SKILLS]: {
+		path: RoutePath.skills,
+		element: <SkillsPage />,
 	},
-	[AppRoutes.ADD]: {
-		path: RoutePath.add,
-		element: <AddPage />,
+	[AppRoutes.PREEPS]: {
+		path: RoutePath.preeps,
+		element: <PreepsPage />,
+	},
+	[AppRoutes.CONTACT]: {
+		path: RoutePath.contact,
+		element: <ContactPage />,
 	},
 
 	[AppRoutes.NOT_FOUND]: {

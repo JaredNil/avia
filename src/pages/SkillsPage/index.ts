@@ -1,1 +1,1 @@
-export { MainPageAsync as MainPage } from './ui/MainPage.async';
+export { SkillsPageAsync as SkillsPage } from './ui/SkillsPage.async';

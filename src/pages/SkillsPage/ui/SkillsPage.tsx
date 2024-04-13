@@ -1,41 +1,18 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { YMaps, Map } from '@pbe/react-yandex-maps';
-import { FaPhone } from 'react-icons/fa6';
-import { IoMailOpenOutline } from 'react-icons/io5';
+import { Map, YMaps } from '@pbe/react-yandex-maps';
 
 import slide1 from 'shared/assets/slide1.webp';
+
+import { FaPhone } from 'react-icons/fa6';
+import { IoMailOpenOutline } from 'react-icons/io5';
 import Title from 'shared/ui/Title/Title';
+import cls from './SkillsPage.module.scss';
 
-import cls from './MainPage.module.scss';
-
-const sliderAssets = [slide1, slide1, slide1, slide1];
-
-const MainPage: React.FC = () => {
+const SkillsPage: React.FC = () => {
 	console.log('MAIN PAGE RENDER ---');
 
 	return (
 		<>
-			<Splide
-				className={cls.slider}
-				draggable
-				options={{
-					autoplay: true,
-					type: 'loop',
-					//
-					interval: 3000,
-					pauseOnHover: true,
-					keyboard: true,
-				}}
-				//
-			>
-				{sliderAssets.map((slide) => (
-					<SplideSlide className={cls.slide}>
-						<img src={slide} alt="slide1" />
-					</SplideSlide>
-				))}
-			</Splide>
-
 			<Title>О нашем центре</Title>
 			<div className={cls.pageText}>
 				<p>
@@ -122,4 +99,4 @@ const MainPage: React.FC = () => {
 	);
 };
 
-export default MainPage;
+export default SkillsPage;
