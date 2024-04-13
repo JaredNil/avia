@@ -9,14 +9,20 @@ export type AppRoutesProps = RouteProps & {
 
 export enum AppRoutes {
 	MAIN = 'main',
-	ADD = 'add',
+	ABOUT = 'about',
+	SCHEDULE = 'schedule',
+	PREEPS = 'preeps',
+	CONTACT = 'contact',
 
 	NOT_FOUND = 'not_found',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
 	[AppRoutes.MAIN]: '/',
-	[AppRoutes.ADD]: '/add',
+	[AppRoutes.ABOUT]: '/about',
+	[AppRoutes.SCHEDULE]: '/schedule',
+	[AppRoutes.PREEPS]: '/preeps',
+	[AppRoutes.CONTACT]: '/contact',
 
 	[AppRoutes.NOT_FOUND]: '*',
 };
@@ -25,6 +31,18 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
 	[AppRoutes.MAIN]: {
 		path: RoutePath.main,
 		element: <MainPage />,
+	},
+	[AppRoutes.ABOUT]: {
+		path: RoutePath.about,
+		element: <AboutPage />,
+	},
+	[AppRoutes.ADD]: {
+		path: RoutePath.add,
+		element: <AddPage />,
+	},
+	[AppRoutes.ADD]: {
+		path: RoutePath.add,
+		element: <AddPage />,
 	},
 	[AppRoutes.ADD]: {
 		path: RoutePath.add,

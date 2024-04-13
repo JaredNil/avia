@@ -2,8 +2,32 @@
 @import url("./themes/normal.scss");
 @import url("./variables/global.scss");
 
+// Default theme
+@import '@splidejs/react-splide/css';
+
 body {
-    height: 100vh;
-    max-height: 100vh;
     min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.responsive {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 30px;
+
+    @media (min-width: 420px) {
+        padding: 0 35px;
+        width: 100%;
+    }
+
+    @media (min-width: 960px) {
+        padding: 0 0;
+        width: 870px;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 0 0;
+        width: 1120px;
+    }
 }
